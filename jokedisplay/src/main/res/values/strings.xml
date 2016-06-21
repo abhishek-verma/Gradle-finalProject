@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">JokeDisplay</string>
+    <string name="no_joke_available">No joke currently available!</string>
+</resources>
