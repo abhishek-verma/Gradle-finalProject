@@ -14,5 +14,6 @@ public class JokeSupplierTest {
         JokeSupplier js = new JokeSupplier();
         String joke = js.getJoke();
         assert joke.length() > 0;
+//        assert 1 == 2;//To check test actually executes
     }
 }

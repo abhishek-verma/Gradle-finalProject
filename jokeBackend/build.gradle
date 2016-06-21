@@ -41,5 +41,5 @@ appengine {
     }
 
     //For testing in a physical device
-    httpAddress = "0.0.0.0"
+//    httpAddress = "0.0.0.0"
 }

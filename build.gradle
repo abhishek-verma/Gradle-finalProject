@@ -17,3 +17,27 @@ allprojects {
         jcenter()
     }
 }
+//
+//task startBackend {
+//    dependsOn ":jokeBackend:assemble"
+//}
+//
+//task runTests {
+//    mustRunAfter "jokeBackend:assemble"
+//    dependsOn ":app:test", ":jokedisplay:test", ":jokesource:test"
+//    finalizedBy "jokeBackend:appengineStop"
+//}
+
+task runMainTests {
+    mustRunAfter "jokeBackend:assemble"
+    dependsOn ":app:connectedCheck"
+    finalizedBy "jokeBackend:appengineStop"
+}
+
+task runLibraryTests {
+    dependsOn ":jokesource:test", ":jokedisplay:connectedCheck"
+}
+
+task runAllTests {
+    dependsOn "runMainTests", "runLibraryTests"
+}
