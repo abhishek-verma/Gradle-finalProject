@@ -38,6 +38,5 @@ public class JokeActivityTest {
     @Test
     public void jokeIsDisplayed() {
         onView(withId(R.id.jokeTxtV)).check(matches(withText(TEST_JOKE)));
-//        onView(withId(R.id.jokeTxtV)).check(matches(withText("batman")));
     }
 }
